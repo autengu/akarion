@@ -1,0 +1,8 @@
+<div *ngFor="let role of roles" class="main-box">
+  <Input
+    type="checkbox"
+    [checked]="role.selected"
+    (change)="changeSelected(role.title)"/>
+  <span class="clickable" (click)="onRoleClick(role)">{{role.title}}</span>
+</div>
+

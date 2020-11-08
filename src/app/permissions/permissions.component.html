@@ -1,0 +1,8 @@
+<div class="permissions-box">
+  <div *ngFor="let permission of permissions">
+    <Input type="checkbox"
+           [checked]="this.currentRole.permissions.includes(permission)"
+           (change)="changeSelection(permission)"/>
+    <span class="pad-left">{{permission}}</span>
+  </div>
+</div>

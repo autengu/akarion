@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "multiselectPermission"
+    }
+  },
+  "defaultProject": "multiselectPermission",
+  "cli": {
+    "analytics": false
+  }
 }

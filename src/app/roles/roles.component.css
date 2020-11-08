@@ -1,0 +1,7 @@
+.main-box {
+  border: 1px solid red;
+}
+
+.clickable {
+  cursor: pointer;
+}

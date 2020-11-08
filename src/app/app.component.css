@@ -1,0 +1,5 @@
+.main-box {
+  border: 1px solid blue;
+  display: flex;
+  align-items: center;
+}

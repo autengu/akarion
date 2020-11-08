@@ -12,14 +12,11 @@ export interface JobRole {
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'multiselectPermission';
+  @Input() selectedRoles = new Array<JobRole>();
 
+  jobRoles = new Array<JobRole>();
   currentRole: JobRole;
 
-  @Input() jobRoles = new Array<JobRole>();
-
-
-  //Testdata
   ngOnInit(): void {
     this.jobRoles.push(
       {
@@ -30,7 +27,7 @@ export class AppComponent implements OnInit {
       {
         title: 'Software Engineer',
         permissions: [],
-        selected: true
+        selected: false
       }, {
         title: 'Marketing guy',
         permissions: [],
@@ -46,6 +43,9 @@ export class AppComponent implements OnInit {
         role.selected = !role.selected;
         if (role.selected === false) {
           this.currentRole = undefined;
+          this.selectedRoles.splice(this.selectedRoles.findIndex(val => val.title === role.title), 1);
+        } else {
+          this.selectedRoles.push(role);
         }
       }
     });

@@ -1,6 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
 
-
 export interface JobRole {
   title: string;
   permissions?: Array<string>;
